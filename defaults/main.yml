@@ -1,0 +1,4 @@
+---
+erlang_version: 1:18.3-dfsg-1ubuntu3 # requires ubuntu 16.04 to run
+rabbitmq_version_name: kitten # see http://www.rabbitmq.com/debian/dists/ for available versions.
+rabbitmq_ulimit: 1024 

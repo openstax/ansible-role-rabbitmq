@@ -1,0 +1,14 @@
+---
+- name: install RabbitMQ
+  include_tasks: install.yml
+  tags:
+    - rabbitmq
+    - rabbitmq-install
+
+- name: ensure RabbitMQ is started and enabled (if configured).
+  become: yes
+  service:
+    name: rabbitmq-server
+    state: started
+    enabled: yes
+

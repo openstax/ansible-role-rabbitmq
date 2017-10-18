@@ -1,0 +1,21 @@
+---
+- name: add RabbitMQ source
+  become: yes
+  apt_repository:
+    repo: "deb http://www.rabbitmq.com/debian/ testing main" 
+    state: present
+    filename: rabbitmq
+
+- name: store RabbitMQ pubkey
+  become: yes
+  apt_key:
+    url: https://www.rabbitmq.com/rabbitmq-release-signing-key.asc
+    state: present
+
+- name: install RabbitMQ server at latest
+  become: yes
+  apt: 
+    name: rabbitmq-server
+    update_cache: yes
+    state: present
+
