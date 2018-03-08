@@ -1,0 +1,3 @@
+- src: https://github.com/openstax/ansible-role-erlang.git
+  version: master
+  name: openstax.erlang
